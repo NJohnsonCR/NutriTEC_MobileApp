@@ -3,10 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NutriTEC_MobileApp.Views.RegisterPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Register Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="GhostWhite">
+            <Label Text="REGISTER" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Medium" FontAttributes="Bold"/>
+            <Entry x:Name="emailEntry" Keyboard ="Default" Placeholder="E-mail"/>
+            <Entry x:Name="nameEntry" Keyboard="Default" Placeholder="Name" />
+            <Entry x:Name="lname1Entry" Keyboard ="Default" Placeholder="Lastname 1"/>
+            <Entry x:Name="lname2Entry" Keyboard ="Default" Placeholder="Lastname 2"/>
+            <Entry x:Name="passwordEntry" IsPassword="True" Keyboard ="Default"   Grid.Row="4" Placeholder="Password"/>
+            <Entry x:Name="countryEntry" Keyboard ="Default" Placeholder="Country"/>
+            <Entry x:Name="caloriegoalEntry" Keyboard ="Default" Placeholder="Calorie Goal"/>
+            <Entry x:Name="heightEntry" Keyboard ="Default" Placeholder="Height"/>
+            <Entry x:Name="weigthEntry" Keyboard ="Default" Placeholder="Weight"/>
+            <Label Text="Birthdate:" FontSize="Medium"/>
+            <DatePicker x:Name="startDatePicker" Format="D"/>
+            <Button Text="REGISTER" Clicked="Button_Clicked" BackgroundColor="#645fce" TextColor="White" Margin="25" FontAttributes="Bold" CornerRadius="20"/>
+
+
         </StackLayout>
+           
+
+
     </ContentPage.Content>
 </ContentPage>
