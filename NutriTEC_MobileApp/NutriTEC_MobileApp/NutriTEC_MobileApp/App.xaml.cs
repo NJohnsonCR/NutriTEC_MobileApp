@@ -10,7 +10,10 @@ namespace NutriTEC_MobileApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Views.LogInPage())
+            {
+                BarBackgroundColor = Color.FromHex("#645fce"),
+            };
         }
 
         protected override void OnStart()

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NutriTEC_MobileApp.Views.LogInPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#645fce" Padding="0">
+            <Grid>
+                <StackLayout Padding="0" Margin="0">
+                    <Frame BackgroundColor =  "White" HeightRequest="130" HorizontalOptions="FillAndExpand">
+                        <Image Source="https://cdn.discordapp.com/attachments/1112641428493959189/1113304008984104960/logo_transparent.png"  Aspect="AspectFit"  Margin="0"/>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Margin="15,110,15,0">
+                    <Frame BackgroundColor="GhostWhite" HasShadow="True" HeightRequest="350" HorizontalOptions="FillAndExpand">
+                        <StackLayout>
+                            <StackLayout HorizontalOptions="CenterAndExpand">
+                                <Label Text="SIGN IN" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+                            </StackLayout>
+
+                            <StackLayout Margin="0,25,0,0">
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Frame BackgroundColor="white" CornerRadius="50" HeightRequest="25" WidthRequest="25" Padding="0" HorizontalOptions="Start" Margin="7">
+
+                                        </Frame>
+                                        <Entry x:Name="txtUsername" Placeholder="Email" TextColor="Black" HorizontalOptions="FillAndExpand" Margin="0, 0, 15, 0"/>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0,20,0,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Frame BackgroundColor="White" CornerRadius="50" HeightRequest="25" WidthRequest="25" Padding="0" HorizontalOptions="Start" Margin="7">
+
+                                        </Frame>
+                                        <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True"  TextColor="Black" HorizontalOptions="FillAndExpand" Margin="0, 0, 15, 0"/>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+
+
+                            <StackLayout>
+                                <Button Text="SIGN IN" Clicked="Button_Clicked" BackgroundColor="#645fce" TextColor="White" Margin="0, 20, 0, 0" FontAttributes="Bold" CornerRadius="20"/>
+                                <Label HorizontalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Don't have an account?" TextColor="Black"/>
+                                            <Span Text=" Register" TextColor="Gray" FontAttributes="Bold"  TextDecorations="Underline"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+
+                            </StackLayout>
+
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
