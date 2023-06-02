@@ -4,9 +4,13 @@
              x:Class="NutriTEC_MobileApp.Views.HomePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Home Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="HOME PAGE" TextColor="Black" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold"/>
+            </StackLayout>
+
+            <Button Text="ADD CONSUMPTION" Clicked="Button_AddMeasurement" BackgroundColor="#645fce" TextColor="White" Margin="0, 20, 0, 0" FontAttributes="Bold" CornerRadius="20"/>
+
+            <Button Text="ADD MEASUREMENT" Clicked="Button_AddConsumption" BackgroundColor="#645fce" TextColor="White" Margin="0, 20, 0, 0" FontAttributes="Bold" CornerRadius="20"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

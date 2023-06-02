@@ -16,5 +16,15 @@ namespace NutriTEC_MobileApp.Views
         {
             InitializeComponent();
         }
+
+        private void Button_AddConsumption(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AddConsumptionPage());
+        }
+        private void Button_AddMeasurement(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AddMeasurementPage());
+        }
+
     }
 }
