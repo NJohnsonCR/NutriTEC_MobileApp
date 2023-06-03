@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="#645fce" Padding="0">
             <Grid>
-                <StackLayout Padding="0" Margin="0">
+                <StackLayout  Padding="0" Margin="0">
                     <Frame BackgroundColor =  "White" HeightRequest="130" HorizontalOptions="FillAndExpand">
                         <Image Source="https://cdn.discordapp.com/attachments/1112641428493959189/1113304008984104960/logo_transparent.png"  Aspect="AspectFit"  Margin="0"/>
                     </Frame>

@@ -4,9 +4,35 @@
              x:Class="NutriTEC_MobileApp.Views.AddConsumptionPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Add Consumption" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Medium" FontAttributes="Bold"/>
+            <SearchBar Placeholder= "Search items..." TextColor="Black" HorizontalOptions ="Center"/>
+
+            <ListView  Margin="0">
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Breakfast</x:String>
+                        <x:String>Lunch</x:String>
+                        <x:String>Dinner</x:String>
+                        <x:String>Snack</x:String>
+                        <x:String>Snack</x:String>
+                    </x:Array>
+                </ListView.ItemsSource>
+            </ListView>
+            <Label Text="Select meal time:" TextColor="Black" Margin="0,0,0,20" FontSize="Medium" FontAttributes="Bold"/>
+            <Picker Title="Meal time"
+                x:Name="mealTimePicker" Margin="0,0,0,20">
+            </Picker>
+            <StackLayout Margin="0,0,0,0" Orientation="Horizontal">
+                <Label Text="Size(ml/g)" TextColor="Black" FontSize="Medium"   Margin="0,0,0,65" FontAttributes="Bold"/>
+                <Entry x:Name="sizeEntry" Placeholder="Enter size" TextColor="Black" Margin="0,0,0,65"/>
+            </StackLayout>
+
+            <StackLayout Margin="0,0,0,0" Orientation="Horizontal">
+   
+                <Button Text="ADD" BackgroundColor="#645fce" TextColor="White" HorizontalOptions="CenterAndExpand" Margin="25" FontAttributes="Bold" CornerRadius="20"/>
+                <Button Text="SUBMIT" BackgroundColor="#645fce" TextColor="White" HorizontalOptions="CenterAndExpand" Margin="25" FontAttributes="Bold" CornerRadius="20"/>
+              </StackLayout>
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
