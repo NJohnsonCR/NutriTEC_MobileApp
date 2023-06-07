@@ -15,7 +15,7 @@
             <Entry x:Name="heightEntry" Keyboard ="Default" Placeholder="Height"/>
             <Entry x:Name="weigthEntry" Keyboard ="Default" Placeholder="Weight"/>
             <Label Text="Birthdate:" FontSize="Medium"/>
-            <DatePicker x:Name="startDatePicker" Format="D"/>
+            <DatePicker x:Name="startDatePicker" Format="yyyy-MM-dd" Date="{Binding SelectedFromDate}"/>
             <Button Text="REGISTER" Clicked="Button_Clicked" BackgroundColor="#645fce" TextColor="White" Margin="25" FontAttributes="Bold" CornerRadius="20"/>
 
 
