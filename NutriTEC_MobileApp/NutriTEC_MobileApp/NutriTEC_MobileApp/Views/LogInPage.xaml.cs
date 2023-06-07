@@ -19,7 +19,7 @@ namespace NutriTEC_MobileApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LogInPage : ContentPage
     {
-        public static UserReturnModel CURRENTUSER;
+        public static string CURRENTUSER;
         public LogInPage()
         {
             InitializeComponent();
@@ -34,32 +34,24 @@ namespace NutriTEC_MobileApp.Views
             user.email = email;
             user.password = password;
 
-            var baseAddress = new Uri("http://nutritec-api.azurewebsites.net");
-            using (var httpclient = new HttpClient {BaseAddress = baseAddress })
-            {
-                httpclient.DefaultRequestHeaders.Clear();
-                httpclient.DefaultRequestHeaders.TryAddWithoutValidation("accept", "application/json, application/geo+json, application/gpx+xml, img/png; charset=utf-8");
-                httpclient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "xxx");
-                
-                using (var content = new StringContent(JsonConvert.SerializeObject(user), Encoding.UTF8, "application/json"))
-                {
-                    using (var response = await httpclient.PostAsync("/api/auth_client", content))
-                    {
-                        string apiResponse = await response.Content.ReadAsStringAsync();
+            string baseAddress = "http://nutritec-api.azurewebsites.net/api/auth_client_mobile/";
 
-                        if (user.password == "1234")
-                        {
-                            await Navigation.PushAsync(new HomePage());
-                        }
-                        else
-                        {
-                            await DisplayAlert("Alert", "The values provided don't match with any NutriTEC user.", "Understood");
-                        }
-                    }
-                }   
+            string parameterEmail = email.Replace("@", "%40");
+
+            HttpClient client = new HttpClient();
+
+            HttpResponseMessage response = await client.GetAsync(baseAddress + parameterEmail + "/" + password);
+
+
+            if (response.IsSuccessStatusCode) {
+                CURRENTUSER = email;
+                await Navigation.PushAsync(new HomePage());
+            }
+            else
+            {
+                await DisplayAlert("Error", "Username or password are incorrect!", "OK");   
             }
 
-            
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)

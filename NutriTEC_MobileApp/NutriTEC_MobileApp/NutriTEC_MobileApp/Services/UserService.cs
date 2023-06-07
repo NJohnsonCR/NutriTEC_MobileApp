@@ -39,7 +39,6 @@ namespace NutriTEC_MobileApp.Services
                 }
                 else
                 {
-                    NutriTEC_MobileApp.Views.LogInPage.CURRENTUSER = inputUser.result;
                     return await Task.FromResult(true);
                 }
 
