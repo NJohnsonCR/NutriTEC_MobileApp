@@ -13,11 +13,19 @@ namespace NutriTEC_MobileApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddProductPage : ContentPage
     {
+        /// <summary>
+        /// Initializes the add product page and its components.
+        /// </summary>
         public AddProductPage()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// The button event that adds a product to the database using a get method with the parameters of the product.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void  Button_Clicked(object sender, EventArgs e)
         {
             string name = nameEntry.Text;

@@ -14,11 +14,19 @@ namespace NutriTEC_MobileApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegisterPage : ContentPage
     {
+        /// <summary>
+        /// Initializes the register page and its components.
+        /// </summary>
         public RegisterPage()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// The button event used for registering a new client using a get method from the API with the parameters introduced.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void Button_Clicked(object sender, EventArgs e)
         {
 

@@ -6,6 +6,9 @@ namespace NutriTEC_MobileApp
 {
     public partial class App : Application
     {
+        /// <summary>
+        /// Sets the first page to appear on the mobile app as the log in page.
+        /// </summary>
         public App()
         {
             InitializeComponent();

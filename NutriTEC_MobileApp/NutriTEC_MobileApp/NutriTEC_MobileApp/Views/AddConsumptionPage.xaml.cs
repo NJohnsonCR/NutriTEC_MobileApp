@@ -15,20 +15,19 @@ namespace NutriTEC_MobileApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddConsumptionPage : ContentPage
     {
-
+        /// <summary>
+        /// Initializes the page and its components.
+        /// </summary>
         public AddConsumptionPage()
         {
             InitializeComponent();
-            /*
-            List<ProductSearch> products = new List<ProductSearch>();
-            products.Add(new ProductSearch { product_name = "Manzana", barcode = 123456789 });
-            products.Add(new ProductSearch { product_name = "Pera", barcode = 987654321 });
-            products.Add(new ProductSearch { product_name = "Banano", barcode = 123456789 });
-            myListView.ItemsSource = products;
-            */
-
         }
 
+        /// <summary>
+        /// The search bar event that searches for a product in the database, call the get method, and displays it in the list view.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void searchBarEntry_SearchButtonPressed(object sender, EventArgs e)
         {
 
@@ -59,6 +58,11 @@ namespace NutriTEC_MobileApp.Views
             }
             
         }
+        /// <summary>
+        /// The button event that adds the consumption to the database using a get method with the parameters introduced, and displays a message if it was successful or not.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Clicked(object sender, EventArgs e)
         {
             //meal time picker cant be null

@@ -20,11 +20,19 @@ namespace NutriTEC_MobileApp.Views
     public partial class LogInPage : ContentPage
     {
         public static string CURRENTUSER;
+        /// <summary>
+        /// Initializes the login page and its components.
+        /// </summary>
         public LogInPage()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// The button event used for authenticating the user using a get method from the API.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void Button_Clicked(object sender, EventArgs e)
         {
             string email = txtUsername.Text;
@@ -54,6 +62,11 @@ namespace NutriTEC_MobileApp.Views
 
         }
 
+        /// <summary>
+        /// The button event used for navigating to the register page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             System.Console.WriteLine("Hit register button" );

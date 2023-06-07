@@ -10,6 +10,9 @@ namespace NutriTEC_MobileApp
 {
     public partial class MainPage : ContentPage
     {
+        /// <summary>
+        /// Initializes the maing page.
+        /// </summary>
         public MainPage()
         {
             InitializeComponent();
