@@ -21,10 +21,11 @@ namespace NutriTEC_MobileApp.Views
         {
             Navigation.PushAsync(new AddConsumptionPage());
         }
-        private void Button_AddMeasurement(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new AddMeasurementPage());
-        }
 
+        private void Button_AddProduct(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AddProductPage());
+
+        }
     }
 }

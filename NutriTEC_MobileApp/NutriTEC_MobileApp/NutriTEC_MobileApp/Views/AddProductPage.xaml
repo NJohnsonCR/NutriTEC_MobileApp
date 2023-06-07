@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NutriTEC_MobileApp.Views.AddProductPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="GhostWhite">
+            <Label Text="ADD PRODUCT" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Medium" FontAttributes="Bold"/>
+            <Entry x:Name="nameEntry" Keyboard ="Text" Placeholder="Name"/>
+            <Entry x:Name="sizeEntry" Keyboard="Numeric" Placeholder="Size" />
+            <Entry x:Name="calciumEntry" Keyboard ="Numeric" Placeholder="Calcium"/>
+            <Entry x:Name="sodiumEntry" Keyboard ="Numeric" Placeholder="Sodium"/>
+            <Entry x:Name="carbsEntry" Keyboard ="Numeric" Placeholder="Carbs"/>
+            <Entry x:Name="fatEntry" Keyboard ="Numeric" Placeholder="Fat"/>
+            <Entry x:Name="caloriesEntry" Keyboard ="Numeric" Placeholder="Calories"/>
+            <Entry x:Name="ironEntry" Keyboard ="Numeric" Placeholder="Iron"/>
+            <Entry x:Name="proteinEntry" Keyboard ="Numeric" Placeholder="Protein"/>
+            <Button Text="ADD PRODUCT" Clicked="Button_Clicked" BackgroundColor="#645fce" TextColor="White" Margin="25" FontAttributes="Bold" CornerRadius="20"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
