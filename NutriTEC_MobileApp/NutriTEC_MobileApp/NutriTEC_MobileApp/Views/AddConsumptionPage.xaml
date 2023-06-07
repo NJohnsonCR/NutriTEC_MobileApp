@@ -5,22 +5,27 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Add Consumption" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Medium" FontAttributes="Bold"/>
-            <SearchBar Placeholder= "Search items..." TextColor="Black" HorizontalOptions ="Center"/>
+            <SearchBar Placeholder= "Search items..." x:Name = "searchBarEntry" SearchButtonPressed="searchBarEntry_SearchButtonPressed"  TextColor="Black" HorizontalOptions ="Center"/>
 
-            <ListView  Margin="0">
-                <ListView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Breakfast</x:String>
-                        <x:String>Lunch</x:String>
-                        <x:String>Dinner</x:String>
-                        <x:String>Snack</x:String>
-                        <x:String>Snack</x:String>
-                    </x:Array>
-                </ListView.ItemsSource>
+            <ListView  x:Name="myListView" Margin="0" SeparatorColor="Gray">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell TextColor="Black"
+                                  Text="{Binding product_name}"
+                                  Detail="{Binding barcode}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
             <Label Text="Select meal time:" TextColor="Black" Margin="0,0,0,20" FontSize="Medium" FontAttributes="Bold"/>
             <Picker Title="Meal time"
                 x:Name="mealTimePicker" Margin="0,0,0,20">
+                <Picker.Items>
+                    <x:String>Breakfast</x:String>
+                    <x:String>Lunch</x:String>
+                    <x:String>Dinner</x:String>
+                    <x:String>Early snack</x:String>
+                    <x:String>Late snack</x:String>
+                </Picker.Items>
             </Picker>
             <StackLayout Margin="0,0,0,0" Orientation="Horizontal">
                 <Label Text="Size(ml/g)" TextColor="Black" FontSize="Medium"   Margin="0,0,0,65" FontAttributes="Bold"/>
@@ -28,9 +33,7 @@
             </StackLayout>
 
             <StackLayout Margin="0,0,0,0" Orientation="Horizontal">
-   
-                <Button Text="ADD" BackgroundColor="#645fce" TextColor="White" HorizontalOptions="CenterAndExpand" Margin="25" FontAttributes="Bold" CornerRadius="20"/>
-                <Button Text="SUBMIT" BackgroundColor="#645fce" TextColor="White" HorizontalOptions="CenterAndExpand" Margin="25" FontAttributes="Bold" CornerRadius="20"/>
+                <Button Text="SUBMIT" Clicked="Button_Clicked" BackgroundColor="#645fce" TextColor="White" HorizontalOptions="CenterAndExpand" Margin="25" FontAttributes="Bold" CornerRadius="20"/>
               </StackLayout>
         </StackLayout>
 
