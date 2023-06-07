@@ -4,10 +4,7 @@ using System.Text;
 
 namespace NutriTEC_MobileApp.API_Models
 {
-    public class UserModel
+    internal class Product
     {
-        public string email { get; set; }
-        public string password { get; set; }
-
     }
 }
